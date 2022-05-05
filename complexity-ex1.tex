@@ -12,13 +12,35 @@
 \end{itemize}
 
 \begin{aufgabe}[Diagonalization]\mbox{}\\
-    Formally prove that $\textbf{SPACE}(n)\ne\textbf{NP}$ holds.
-    \textit{(Note: It is unknown whether one of the complexity classes contains the other.)}
+    Let $f,g\colon\N\to\N$ be space-constructible functions with $f(n)\le o(g(n))$.
+    \textbf{Formally prove} that $\mathbf{SPACE}(f(n))\subsetneq\mathbf{SPACE}(g(n))$ holds.
+
+    \textit{Hint: Use diagonalization to construct a language~$L\in\mathbf{SPACE}(g(n))$ with $L\not\in\mathbf{SPACE}(f(n))$.}
+
+    \textit{You can use the following fact without proving it:}
+    There exists a deterministic Turing machine $\mathcal{SU}$ such that, for every string~$\alpha$ and input~$x$:
+    \begin{enumerate}
+      \item if the Turing machine $M_\alpha$ represented by $\alpha$ halts on $x$ without using more than $t$ cells of its work tapes, then $\mathcal{SU}(\alpha,t,x)=M_\alpha(x)$ holds, and
+      \item $\mathcal{SU}$ only ever uses at most $|\alpha|\cdot t$ cells of its work tapes.
+    \end{enumerate}
 \end{aufgabe}
 
-\begin{aufgabe}[?]\mbox{}\\
-?
+\begin{aufgabe}[Oracles]\mbox{}\\
+  Let $M$ be a deterministic oracle Turing machine that only queries strings 
+  that are shorter than the input string.
+  Let $A,B\subseteq\{0,1\}^\ast$ be two languages.
+  Formally prove the following: If $A = L(M^A)$ and $B = L(M^B)$, then $A = B$.
+  
+  \emph{Hint:} Prove by induction over $n$ that $A^{\le n} = B^{\le n}$ holds. Here $L^{\le n}=\{x\in L\colon |x|\le n\}$.
 \end{aufgabe}
 
-
+\begin{aufgabe}[Integer Factorization]\mbox{}\\
+  Let $\mathtt{FACTOR}=\{\langle\operatorname{bin}(x),\operatorname{bin}(y)\rangle\colon \text{$x,y\in\N$ and there is an integer $i$ with $2\le i \le y$ and $i \mathrel{|} x$}\}$,
+  where $\operatorname{bin}(x)$ denotes the binary encoding of the non-negative integer~$x$.
+  Prove the following.
+  \begin{enumerate}
+    \item $\mathtt{FACTOR}\in\mathbf{NP}$.
+    \item $\mathtt{FACTOR}\in\mathbf{coNP}$. (As a black box, you can use the result by Agrawal, Kayal, and Saxena that $\mathtt{PRIMES}\in\mathbf{P}$, that is, there is a polynomial-time algorithm to decide whether $\operatorname{bin}(q)$ is the binary encoding of a prime number~$q$.)
+  \end{enumerate}
+\end{aufgabe}
 \end{document}

@@ -32,7 +32,6 @@
 \fi
 \usepackage[babel,german=quotes]{csquotes}
 \RequirePackage{microtype}
-\RequirePackage{unicode-math}
 \RequirePackage{epic,graphicx,xcolor}
 \RequirePackage{comment}
 \RequirePackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}

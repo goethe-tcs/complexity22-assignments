@@ -5,5 +5,5 @@
 *.out
 *.synctex.gz
 *.thm
-*week*.pdf
+*complexity-ex*.pdf
 *.gitinfo
