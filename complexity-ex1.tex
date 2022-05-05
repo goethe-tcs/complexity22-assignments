@@ -18,11 +18,9 @@
     \textit{Hint: Use diagonalization to construct a language~$L\in\mathbf{SPACE}(g(n))$ with $L\not\in\mathbf{SPACE}(f(n))$.}
 
     \textit{You can use the following fact without proving it:}
-    There exists a deterministic Turing machine $\mathcal{SU}$ such that, for every string~$\alpha$ and input~$x$:
-    \begin{enumerate}
-      \item if the Turing machine $M_\alpha$ represented by $\alpha$ halts on $x$ without using more than $t$ cells of its work tapes, then $\mathcal{SU}(\alpha,t,x)=M_\alpha(x)$ holds, and
-      \item $\mathcal{SU}$ only ever uses at most $|\alpha|\cdot t$ cells of its work tapes.
-    \end{enumerate}
+    There exists a deterministic Turing machine $\mathcal{SU}$ such that, for every string~$\alpha$ and input~$x$, if the Turing machine $M_\alpha$ represented by $\alpha$ halts on $x$, then
+      $\mathcal{SU}(\alpha,x)=M_\alpha(x)$ holds and
+      $\mathcal{SU}$ only ever uses at most $C_\alpha\cdot s_\alpha(x)$ cells of its work tapes, where $C_\alpha$ is a constant only depending on $\alpha$ and $s_\alpha(x)$ is the number of memory cells used by $M_\alpha$ on input~$x$.
 \end{aufgabe}
 
 \begin{aufgabe}[Oracles]\mbox{}\\
