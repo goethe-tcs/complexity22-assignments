@@ -1,0 +1,55 @@
+% !TeX spellcheck = en_US
+\documentclass[english]{uebung_cs}
+\usepackage{complexity}
+\uebung{2}{}{}
+\blattname{Mandatory Assignment 2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{itemize}
+  \item Hand-in deadline for the written solutions: Tuesday, June 21, at 10:15 in H9 or via E-Mail.
+  \item You are encouraged to work in teams of size $\le 2$ and hand in your solutions together.
+  \item We expect proofs to be formal, detailed, complete, and concise.
+\end{itemize}
+
+\begin{aufgabe}[Exponential time with advice]\mbox{}\\
+  Analogously to the characterization of $\mathrm{P}/\text{poly}$ in terms of Turing machines with advice, we define the following classes.
+  \begin{align*}
+    \mathrm{EXP}/\text{exp} &\coloneqq \bigcup_{a,b,c} \mathrm{DTIME}(2^{a\cdot n^b})/2^{n^c}\\
+    \mathrm{EXP}/\text{poly} &\coloneqq \bigcup_{a,b,c} \mathrm{DTIME}(2^{a\cdot n^b})/n^c
+  \end{align*}
+  Without using the above name, we have already seen that $\mathrm{EXP}/\text{exp}$ is the class of all languages.
+  Prove or disprove: $\mathrm{EXP}/\text{poly}$ is the class of all languages.
+\end{aufgabe}
+
+\begin{aufgabe}[Logarithmic advice and P vs NP]\mbox{}\\
+  Similar to above, define $\mathrm{P}/\text{log} \coloneqq \bigcup_{c,d} \mathrm{DTIME}(n^c)/d\log n$.\\
+  Show that $\textsc{Sat} \in \mathrm{P}/\text{log}$ implies $\mathrm{P} = \mathrm{NP}$.
+\end{aufgabe}
+
+\begin{aufgabe}[Csanky's Algorithm for matrix inversion {[Csanky, 1976]}]\mbox{}\\
+  Show that the problem $\{\langle M, k \rangle \mid M \text{ is a matrix with determinant } k\}$ is in $\mathrm{NC}$.\\
+  ($M$ has integer entries. Assume without loss of generality that the underlying field is $\mathbb{C}$.)
+\end{aufgabe}
+
+\begin{aufgabe}[The $\Delta$-classes in the polynomial hierarchy]\mbox{}\\
+  Define the following additional classes in the polynomial hierarchy:
+  \begin{align*}
+    \Delta_0^p &\coloneqq \mathrm{P}\\
+    \Delta_i^p &\coloneqq \mathrm{P}^{\Sigma_{i-1}^p} \text{ for } i \geq 1.
+  \end{align*}
+  Note that $\Delta_0^p = \Delta_1^p = \mathrm{P}$.
+  Furthermore, it is easy to see that $\bigcup_i \Delta_i^p = \mathrm{PH}$ and that for all $i \geq 1$
+  \[\Sigma_{i-1}^p \cup \Pi_{i-1}^p \subseteq \Delta_i^p \subseteq \Sigma_i^p \cap \Pi_i^p.\]
+  
+  A string $x_1 \cdots x_n$ is lexicographically smaller than a string $y_1 \cdots y_n$ if there is a $j$ such that $x_i = y_i$ for all $i<j$ and $x_j < y_j$.
+  Let
+  \[\textsc{LexSat} \coloneqq \left\{\; \varphi \ \middle| \begin{array}{l}\varphi \text{ is satisfiable and the rightmost bit of the lexicographically}\\ \text{largest satisfying assignment of } \varphi \text{ is } 1\end{array} \right\}.\]
+
+  \begin{enumerate}
+    \item Show that $\textsc{LexSat} \in \Delta_2^p$.
+    \item Show that $\textsc{LexSat} \in \mathrm{NP} \cup \mathrm{coNP}$ implies $\mathrm{NP} = \mathrm{coNP}$.
+  \end{enumerate}
+\end{aufgabe}
+
+\end{document}
