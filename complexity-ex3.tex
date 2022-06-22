@@ -1,0 +1,40 @@
+% !TeX spellcheck = en_US
+\documentclass[english]{uebung_cs}
+\usepackage{complexity}
+\uebung{3}{}{}
+\blattname{Mandatory Assignment 3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{itemize}
+  \item Hand-in deadline for the written solutions: Tuesday, July 5, at 10:15 in H9 or via E-Mail.
+  \item You are encouraged to work in teams of size $\le 2$ and hand in your solutions together.
+  \item We expect proofs to be formal, detailed, complete, and concise.
+\end{itemize}
+
+\begin{aufgabe}
+  Identify the error in the clause gadget (Figure 17.3) and fix it.
+\end{aufgabe}
+
+\begin{aufgabe}
+  Identify the error in Lemma 17.19 and fix it.
+\end{aufgabe}
+
+\begin{aufgabe}
+  A poly-time uniform sampler for satisfiability is a poly-time probabilistic Turing machine
+  that outputs one of the satisfying assignments for the input formula
+  $\varphi$, uniformly at random. The algorithm may output $\bot$ with
+  probability at most $1/4$. If the formula is unsatisfiable, it
+  outputs $\bot$ on all random choices.
+
+  Show that if there is a poly-time algorithm for $\#\mathrm{SAT}$, then there is a poly-time uniform sampler for $\mathrm{SAT}$. (You may assume that there is an algorithm that randomly outputs a $0$ or $1$ with the given rational probability value).
+\end{aufgabe}
+
+\begin{aufgabe}[Exercise 17.6]
+Show that, for every language in AC$^0$, there is a depth three circuit of $n \mathrm{poly}(\log n)$ size that decides it on a $1−1/\mathrm{poly}(n)$ fraction of inputs and looks as follows:
+It has a single $\oplus$-gate of unbounded fan-in at the top, and all other gates are $\wedge$-gates of $\vee$-gates of fan-in at most $\mathrm{poly}(\log n)$.
+
+\emph{Hint: Read and use the proof of Lemma 17.17.}
+\end{aufgabe}
+
+\end{document}
