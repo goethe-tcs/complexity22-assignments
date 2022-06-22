@@ -30,7 +30,7 @@ jobs:
 
       - name: Compile LateX
         # You may pin to the exact commit or the version.
-        uses: hspaans/latexmk-action@v1.0.13
+        uses: hspaans/latexmk-action@v1.1.4
         with:
           format: pdf
           filename: "*.tex"
